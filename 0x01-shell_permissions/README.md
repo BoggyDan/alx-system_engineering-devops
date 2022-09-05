@@ -1,1 +1,1 @@
-This is a script that executes commands based on shell permissions.
+This is a script that executes commands based on shell permissions for files and Directories.
