@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Display 'Best School' ten times but on the 9th time display 'hi'
+
+num=0
+
+while [ $num -lt 10 ]
+do
+    if [ $num -eq 9 ]
+    then
+        echo "Hi"
+    fi
+    echo "Best School"
+    (( num++ ))
+done
