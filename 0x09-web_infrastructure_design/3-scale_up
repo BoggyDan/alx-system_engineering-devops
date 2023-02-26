@@ -1,0 +1,10 @@
+https://imgur.com/VEnBjaR
+Answers:
+    Details
+The inclusion of firewalls between each server.
+This provides protection to every server from unwanted and unauthorized users, rather than just safeguarding a single server.
+
+    Challenges with This Infrastructure
+    Increased maintenance expenses.
+Separating each major component onto its own server implies purchasing additional servers, which would result in higher electricity consumption costs for the company. The procurement of servers and payment for their energy usage (including existing and new ones) would require allocation of company funds.
+
