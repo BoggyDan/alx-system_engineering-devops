@@ -1,0 +1,21 @@
+https://imgur.com/HlNklTG
+Answers:
+        Load Balancer Configuration and Setup:
+
+    The HAProxy load balancer uses the Round Robin distribution algorithm, which rotates between servers based on weight. This is a dynamic algorithm that can adjust server weights on the go and is considered the most fair.
+
+    The load balancer is set up with an Active-Passive configuration, which means not all nodes are active simultaneously. In an Active-Active setup, workloads are distributed across all nodes to prevent overload and improve response times.
+    
+    A Primary-Replica database cluster consists of a Primary server for read/write requests and a Replica server for read requests. Data is synchronized between the servers whenever the Primary server writes.
+
+Differences Between Primary and Replica Nodes:
+
+    The Primary node handles all write operations for the site, while the Replica node processes read operations to reduce traffic to the Primary node.
+
+Issues with this Infrastructure:
+
+    There are several Single Points of Failure, such as the Primary MySQL database server, the load balancer server, and the application server that connects to the Primary database server. If any of these servers fail, the site will be impacted.
+
+    Security is a concern due to the lack of SSL encryption on the network, which could allow hackers to intercept transmitted data. There is also no firewall to block unauthorized IPs.
+
+    There is no monitoring system in place to keep track of each server's status.

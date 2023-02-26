@@ -1,0 +1,31 @@
+https://imgur.com/a/Dwv3JTU
+Answers:
+        Definition of a server.
+A server refers to computer hardware or software that offers services to other computers, which are commonly called clients.
+
+The function of a domain name.
+The purpose of a domain name is to provide a user-friendly substitute for an IP Address. For instance, the domain name www.wikipedia.org is more convenient to remember than 91.198.174.192. The DNS (Domain Name System) maps the IP address and domain name alias.
+
+DNS record type for www.foobar.com.
+www.foobar.com employs an A record, which can be verified by executing dig www.foobar.com. Note that the outcome may vary, but this infrastructure uses an A record. An A Record or DNS host record stores a hostname and its matching IPv4 address.
+
+The function of a web server.
+A web server is a software or hardware that processes requests through HTTP or HTTPS and returns the content of the requested resource or an error message.
+
+The function of an application server.
+The role of an application server is to install, operate, and host applications and related services for end-users, IT services, and organizations. It also enables the delivery of advanced consumer or business applications.
+
+The function of a database.
+The purpose of a database is to store an organized collection of information that can be accessed, managed, and updated with ease.
+
+Communication between server and client.
+The server communicates with the client (the user's computer requesting the website) over the internet network using the TCP/IP protocol suite.
+
+Issues with this infrastructure.
+This infrastructure has several Single Points of Failure (SPOFs). If, for example, the MySQL database server goes down, the entire site will be down.
+
+Downtime during maintenance.
+Any component that requires maintenance must be taken down, or the server must be turned off. Since there is only one server, the website experiences downtime.
+
+Scalability concerns.
+Scaling this infrastructure would be difficult because all the required components are on one server. The server can quickly exhaust resources or slow down when it receives a high volume of requests.
