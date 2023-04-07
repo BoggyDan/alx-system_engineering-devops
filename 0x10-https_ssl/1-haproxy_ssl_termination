@@ -34,13 +34,13 @@ defaults
         errorfile 504 /etc/haproxy/errors/504.http
 
 # start of parameters for boggydan.tech
-frontend boggydan.tech-http-frontend
-        bind     *:80
+frontend boggydan-tech-http-frontend
+        bind *:80
         http-request set-header X-Forwarded-Proto http
         default_backend  boggydan.tech-backend
 
 
-frontend  boggydan.tech-https-frontend
+frontend  boggydan-tech-https-frontend
         bind *:443 ssl crt /etc/haproxy/certs/boggydan.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend boggydans.tech-backend
@@ -48,6 +48,7 @@ frontend  boggydan.tech-https-frontend
 
 backend boggydan.tech-backend
         balance roundrobin
+        redirect scheme https code 301 if !{ ssl_fc }
         server 135747-web-01 52.91.165.230:80 check
         server 135747-web-02 3.84.168.143:80 check
 # end of parameters
