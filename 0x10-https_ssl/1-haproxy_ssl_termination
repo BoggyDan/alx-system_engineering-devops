@@ -2,7 +2,7 @@ global
         log /dev/log    local0
         log /dev/log    local1 notice
         chroot /var/lib/haproxy
-        stats socket /run/haproxy/admin.sock mode 660 level admin expose-fd listeners
+        stats socket /run/haproxy/admin.sock mode 660 level admin
         stats timeout 30s
         user haproxy
         group haproxy
@@ -40,10 +40,10 @@ frontend boggydan-tech-http-frontend
         default_backend  boggydan.tech-backend
 
 
-frontend  boggydan-tech-https-frontend
+frontend boggydan-tech-https-frontend
         bind *:443 ssl crt /etc/haproxy/certs/boggydan.tech.pem
         http-request set-header X-Forwarded-Proto https
-        default_backend boggydans.tech-backend
+        default_backend boggydan.tech-backend
 
 
 backend boggydan.tech-backend
